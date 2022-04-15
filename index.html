@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="style.css">
+    <!-- ===== BOX ICONS ===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="login">
+        <div class="login_content">
+            <div class="image">
+                <img src="img/img-login.svg" alt="image can not load">
+            </div>
+            <div class="signin_up_form">
+                <form action="" class="sign_in" id="login">
+                    <h1 class="title">Sign In</h1>
+                    <div class="txt_box">
+                        <i class='bx bx-user login__icon'></i>
+                        <input type="text" placeholder="Username" class="txt_inp">
+                    </div>
+                    <div class="txt_box">
+                        <i class='bx bx-lock-alt login__icon'></i>
+                        <input type="password" placeholder="Password" class="txt_inp">
+                    </div>
+                    <div class="forgot_pass">
+                        <a href="#" class="">Forgot Password?</a>
+                    </div>
+                    <div class="sign_btn">
+                        <a href="#">Sign In</a>
+                    </div>
+                    <div>
+                        <span class="que">Don't have an account?</span>
+                        <span class="ans" id="sign-up">Sign Up</span>
+                    </div>
+                </form>
+
+                <form action="" class="sign_up" id="logup">
+                    <h1 class="title">Create Account</h1>
+                    <div class="txt_box">
+                        <i class='bx bx-user login__icon'></i>
+                        <input type="text" placeholder="Username" class="txt_inp">
+                    </div>
+                    <div class="txt_box">
+                        <i class='bx bx-at login__icon'></i>
+                        <input type="email" placeholder="Email" class="txt_inp">
+                    </div>
+                    <div class="txt_box">
+                        <i class='bx bx-lock-alt login__icon'></i>
+                        <input type="password" placeholder="Password" class="txt_inp">
+                    </div>
+                    <div class="sign_btn">
+                        <a href="#">Sign Up</a>
+                    </div>
+                    <div>
+                        <span class="que">Already have an account?</span>
+                        <span class="ans" id="sign-in">Sign In</span>
+                    </div>
+                    <div class="social">
+                        <a href="#" class="social-icon"><i class='bx bxl-facebook'></i></a>
+                        <a href="#" class="social-icon"><i class='bx bxl-twitter'></i></a>
+                        <a href="#" class="social-icon"><i class='bx bxl-google'></i></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--===== MAIN JS =====-->
+    <script src="main.js"></script>
+</body>
+
+</html>

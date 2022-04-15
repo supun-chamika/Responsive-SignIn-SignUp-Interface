@@ -1,0 +1,249 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+
+/*===== VARIABLES CSS =====*/
+:root{
+  /*===== Colores =====*/
+  --first-color: #9D4BFF;
+  --first-color-dark: #23004D;
+  --first-color-light: #A49EAC;
+  --first-color-lighten: #F2F2F2;
+
+  /*===== Font and typography =====*/
+  --body-font: 'Open Sans', sans-serif;
+  --h1-font-size: 1.5rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+}
+
+@media screen and (min-width: 768px){
+    :root{
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+    }
+}
+
+/*===== BASE =====*/
+*,::before,::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    color: var(--first-color-dark);
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*===== LOGIN =====*/
+
+.login{
+    display: grid;
+    grid-template-columns: 100%;
+    height: 100vh;
+    margin-left: 0;
+    margin-right: 0;
+    background:var(--first-color-dark);
+}
+
+.login_content{
+    display: grid;
+}
+
+.image{
+    justify-self: center;
+}
+
+.image img{
+    width: 310px;
+    margin-top: 1.5rem;
+}
+
+.signin_up_form{
+    position: relative;
+    height: 368px;
+    margin: 0 2rem;
+}
+
+.sign_in, .sign_up{
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+    background-color: var(--first-color-lighten);
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(35,0,77,.2);
+    animation-duration: .4s;
+    animation-name: animate-login;
+}
+
+@keyframes animate-login{
+    0%{
+      transform: scale(1,1);
+    }
+    50%{
+      transform: scale(1.1,1.1);
+    }
+    100%{
+      transform: scale(1,1);
+    }
+}
+
+.title{
+    font-size: var(--h1-font-size);
+    margin-bottom: 2rem;
+}
+
+.txt_box{
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    column-gap: 1rem;
+    padding: 1.125rem 1rem;
+    background-color: #FFF;
+    margin-top: 1rem;
+    border-radius: .5rem;
+}
+
+.login__icon{
+    color: var(--first-color);
+    font-size: 1.5rem;
+}
+
+.txt_inp{
+    border: none;
+    outline: none;
+    font-size: var(--normal-font-size);
+    font-weight: 700;
+    color: var(--first-color-light);
+}
+
+.txt_inp::placeholder{
+    font-size: var(--normal-font-size);
+    font-family: var(--body-font);
+    color: var(--first-color-light);
+}
+
+.forgot_pass{
+    display: block;
+    width: max-content;
+    margin-left: auto;
+    margin-top: .5rem;
+    font-size: var(--small-font-size);
+    font-weight: 600;
+    color: var(--first-color-light);
+}
+
+.sign_btn{
+    display: block;
+    padding: 1rem;
+    margin: 2rem 0;
+    background-color: var(--first-color);
+    font-weight: 600;
+    text-align: center;
+    border-radius: 0.5rem;
+    transition: 0.3s;
+}
+
+.sign_btn a{
+    color: var(--first-color-lighten);
+}
+
+.sign_btn:hover{
+    background-color: var(--first-color-dark);
+}
+
+.que, .ans{
+    font-weight: 600;
+    font-size: var(--small-font-size);
+}
+
+.que{
+    color: var(--first-color-dark);
+}
+
+.ans{
+    color: var(--first-color);
+    cursor: pointer;
+}
+
+.social{
+    margin-top: 2rem;
+}
+
+.social-icon{
+    font-size: 1.5rem;
+    color: var(--first-color-dark);
+    margin: 0 2rem;
+}
+
+/*Show login*/
+.block{
+    display: block;
+  }
+  
+/*Hidden login*/
+.none{
+   display: none;
+}
+
+/* ===== MEDIA QUERIES =====*/
+@media screen and (min-width: 576px){
+    .signin_up_form{
+        width: 348px;
+        justify-self: center;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .login{
+        height: 100vh;
+        overflow: hidden;
+        background: none;
+    }
+
+    .login_content{
+        grid-template-columns: repeat(2, max-content);
+        justify-content: center;
+        align-items: center;
+        margin-left: 10rem;
+    }
+
+    .image{
+        display: flex;
+        width: 600px;
+        height: 600px;
+        background-color: var(--first-color-lighten);
+        border-radius: 1rem;
+        padding-left: 1rem;
+    }
+
+    .image img{
+        width: 400px;
+        margin-top: 0;
+    }
+
+    .sign_in, .sign_up{
+        left: -11rem;
+    }
+
+    .sign_in{
+        bottom: -1.5rem;
+    }
+
+    .sign_up{
+        bottom: -5.5rem;
+    }
+}
